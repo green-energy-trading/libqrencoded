@@ -2,7 +2,10 @@
 	"name": "libqrencoded",
 	"description": "D Wrapper for the libqrencode C library",
 	"authors": ["Vincent Brendel", "David Monagle"],
-	"license": "MIT", 
+	"license": "MIT",
+	"targetType": "library",
+	"targetPath": "bin",
+	"libs": ["libqrencode"],
 	"dependencies": {
 	}
 }
