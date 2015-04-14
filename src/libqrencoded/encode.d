@@ -1,5 +1,7 @@
 module libqrencoded.encode;
 
+import libqrencoded.c.capi;
+
 import core.stdc.string;
 
 string libQREncodedVersion() {
