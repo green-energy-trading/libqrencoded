@@ -5,7 +5,7 @@
 	"license": "MIT",
 	"targetType": "library",
 	"targetPath": "bin",
-	"libs": ["libqrencode"],
+	"libs": ["qrencode"],
 	"dependencies": {
 	}
 }
