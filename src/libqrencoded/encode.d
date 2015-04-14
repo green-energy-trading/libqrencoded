@@ -1,4 +1,4 @@
-module libqrencoded;
+module libqrencoded.encode;
 
 import core.stdc.string;
 
