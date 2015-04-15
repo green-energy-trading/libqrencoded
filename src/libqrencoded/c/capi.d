@@ -8,5 +8,6 @@ struct QRcode {
 
 extern(C) {
 	char *QRcode_APIVersionString();
-  QRcode *QRcode_encodeString(const char *string, int v, int level, int hint, int casesensitive);
+	QRcode *QRcode_encodeString(const char *string, int v, int level, int hint, int casesensitive);
+	void QRcode_free(QRcode *qrcode);
 }

@@ -12,7 +12,8 @@ string libQREncodedVersion() {
 
 bool[][] encodeQR(string s) {
 	bool[][] res;
-	QRcode qr = *QRcode_encodeString(cast(char*)((s ~ '\0').dup), 0, 3, 2, 1);
+	QRcode* qrPtr = QRcode_encodeString(cast(char*)((s ~ '\0').dup), 0, 3, 2, 1);
+	QRcode qr = *qrPtr;
 	res.length = qr.width;
 	int i, j;
 	for (i = 0; i < qr.width; i++) {
@@ -21,5 +22,6 @@ bool[][] encodeQR(string s) {
 			res[i][j] = qr.data[(j * qr.width) + i] & 0x1;
 		}
 	}
+	QRcode_free(qrPtr);
 	return res;
 }
