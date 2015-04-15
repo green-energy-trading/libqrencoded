@@ -1,12 +1,12 @@
 module libqrencoded.c.capi;
 
-QRcode = {
-  int version;
+struct QRcode {
+  int v;
   int width;
-  unsigned char *data;
+  ubyte *data;
 }
 
 extern(C) {
 	char *QRcode_APIVersionString();
-  QRcode *QRcode_encodeString(const char *string, int version, QRecLevel level, QRencodeMode hint, int casesensitive);
+  QRcode *QRcode_encodeString(const char *string, int v, int level, int hint, int casesensitive);
 }
